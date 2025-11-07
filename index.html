@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shodhan P G — Portfolio</title>
+  <meta name="description" content="Shodhan P G — Assistant Professor | Computer Science Educator " />
+  <style>
+    :root {
+      --muted:#6b7280;
+      --primary:#0b61ff;
+      --card:#f8fafc;
+      --max-width:1100px;
+      --radius:12px;
+      --shadow:0 6px 20px rgba(12, 24, 40, 0.06);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{
+      margin:0;
+      background:linear-gradient(135deg,#f5f9ff 0%,#ffffff 100%);
+      color:#0b1220;
+      scroll-behavior:smooth;
+    }
+    a{color:var(--primary);text-decoration:none}
+    header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,0.85);backdrop-filter:blur(6px);border-bottom:1px solid #e2e8f0;box-shadow:0 1px 4px rgba(0,0,0,0.05)}
+    .container{max-width:var(--max-width);margin:0 auto;padding:28px}
+    nav{display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:14px;align-items:center;animation:fadeDown 1.2s ease-out}
+    .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,#eaf1ff,#dfe9ff);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--primary)}
+    .navlinks{display:flex;gap:18px;align-items:center;animation:fadeDown 1.5s ease-out}
+    .btn-primary{background:var(--primary);color:white;padding:10px 14px;border-radius:10px;font-weight:600;box-shadow:0 2px 8px rgba(11,97,255,0.25);transition:0.3s;cursor:pointer}
+    .btn-primary:hover{transform:translateY(-3px) scale(1.05);box-shadow:0 4px 12px rgba(11,97,255,0.35)}
+
+    /* Animations */
+    @keyframes fadeUp {from{opacity:0;transform:translateY(40px);}to{opacity:1;transform:translateY(0);}}
+    @keyframes fadeDown {from{opacity:0;transform:translateY(-40px);}to{opacity:1;transform:translateY(0);}}
+    @keyframes zoomIn {from{opacity:0;transform:scale(0.8);}to{opacity:1;transform:scale(1);}}
+
+    .fade-up {opacity:0;transform:translateY(40px);transition:all 0.8s ease-out;}
+    .fade-up.visible {opacity:1;transform:translateY(0);}
+    .zoom-in {opacity:0;transform:scale(0.9);transition:all 0.8s ease-out;}
+    .zoom-in.visible {opacity:1;transform:scale(1);}
+
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:40px;align-items:center;padding:64px 0}
+    .hero h1{font-size:34px;margin:0 0 12px;color:#0a1a40;animation:fadeUp 1.2s ease-out}
+    .hero p.lead{color:#44506b;margin:0 0 18px;line-height:1.6;font-size:17px;animation:fadeUp 1.5s ease-out}
+    .hero .actions{display:flex;gap:12px;animation:zoomIn 1.8s ease-out}
+    .card{background:var(--card);padding:18px;border-radius:var(--radius);box-shadow:var(--shadow);transition:transform 0.3s ease}
+    .card:hover{transform:translateY(-5px) scale(1.02)}
+    .profile-img{width:100%;border-radius:10px;object-fit:cover;display:block;animation:zoomIn 1.4s ease-out}
+
+    section{padding:60px 0;border-top:1px solid #e9eef5}
+    h2{margin:0 0 18px;font-size:22px;color:#0a1a40}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .stack{display:flex;flex-direction:column;gap:10px}
+    .chips{display:flex;flex-wrap:wrap;gap:8px}
+    .chip{background:#eaf0ff;padding:8px 10px;border-radius:999px;font-weight:600;font-size:13px;color:#0b2a70;transition:transform 0.2s ease}
+    .chip:hover{transform:scale(1.1)}
+    .project{display:flex;gap:14px;align-items:flex-start}
+    .project .meta{color:var(--muted);font-size:13px}
+    .list-item{padding:14px;border-radius:10px;background:linear-gradient(180deg,#fff,#fbfdff);box-shadow:0 4px 14px rgba(12,24,40,0.04)}
+    form{display:grid;gap:10px}
+    input,textarea{padding:12px;border-radius:8px;border:1px solid #cbd5e1;font-size:14px}
+    textarea{min-height:120px}
+    .muted{color:var(--muted)}
+    footer{padding:32px 0;color:var(--muted);font-size:14px;border-top:1px solid #e5e9f0;background:#f9fbff}
+    @media(max-width:980px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr}}
+    @media(max-width:520px){.navlinks{display:none}.logo{width:44px;height:44px}.container{padding:12px}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <div class="brand">
+        <div class="logo">SP</div>
+        <div>
+          <strong>Shodhan P G</strong><br>
+          <span class="muted" style="font-size:13px">Assistant Professor • Computer Science Educator</span>
+        </div>
+      </div>
+      <div class="navlinks">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+        <a class="btn-primary" href="Shodhan_PG_Profile.pdf" download>Download CV</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <section class="hero" id="home">
+      <div>
+        <h1>Hi — I’m <span style="color:var(--primary)">Shodhan P G</span></h1>
+        <p class="lead">I’m an Assistant Professor in Computer Science with a passion for teaching, innovation, and technology-driven education. My expertise spans IoT systems, web development, and software engineering, where I strive to combine academic theory with practical applications to inspire learners and create impactful experiences.</p>
+        <div class="actions">
+          <a class="btn-primary" href="#projects">View Projects</a>
+          <a href="mailto:shodhanp68@gmail.com" style="align-self:center">Contact Me</a>
+        </div>
+      </div>
+      <aside class="card zoom-in" style="width:100%;max-width:420px">
+        <img class="profile-img" src="img.jpg" alt="Profile image">
+        <div style="margin-top:12px;display:flex;justify-content:space-between;align-items:center">
+          <div>
+            <div style="font-weight:700">Assistant Professor — St. Philomena College, Puttur</div>
+            <div class="muted" style="font-size:13px">Department of Computer Science</div>
+          </div>
+          <a href="Shodhan_PG_Profile.pdf" download style="font-weight:600">Resume</a>
+        </div>
+      </aside>
+    </section>
+
+    <section id="about" class="fade-up">
+      <h2>About Me</h2>
+      <div class="grid">
+        <div class="stack">
+          <p>I am a dedicated educator and technology enthusiast focused on integrating innovative tools into the learning process. With experience in IoT, web development, and data-driven systems, I aim to help students and developers bridge the gap between theory and real-world application.</p>
+          <h3 style="margin-bottom:8px">Technical Skills</h3>
+          <div class="chips">
+            <div class="chip">Java</div><div class="chip">Python</div><div class="chip">PHP</div><div class="chip">HTML/CSS/JS</div><div class="chip">MySQL / MongoDB</div><div class="chip">ESP8266 / ESP32</div><div class="chip">Blynk Cloud</div><div class="chip">Git • VS Code • Figma</div>
+          </div>
+        </div>
+        <div class="stack">
+          <div class="card list-item fade-up">
+            <strong>Education</strong>
+            <div class="muted" style="margin-top:8px;font-size:14px">
+              <div><strong>MCA</strong> — VCET, Puttur (2024) • CGPA: 8.43</div>
+              <div><strong>BCA</strong> — St. Philomena College, Puttur (2022) • CGPA: 7.91</div>
+              <div><strong>PUC</strong> — Rotary Pre University College Mithadka (2019) • 79%</div>
+              <div><strong>SSLC</strong> — K V G English Medium High School (2017) • 68.48%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="fade-up">
+      <h2>Selected Projects</h2>
+      <div class="stack">
+        <div class="project card zoom-in">
+          <div>
+            <h3>Smart Beehive Monitoring System for Sustainable Beekeeping</h3>
+<div class="meta"><span class="highlight">Funded by KSCST</span> • IoT • ESP32-CAM • DHT11 • HX711 • Blynk Cloud</div>
+<p class="muted">Developed a smart IoT-based system that continuously monitors beehive conditions such as temperature, humidity, weight, and sound. Integrated a <strong>Machine Learning model</strong> for early <strong>Bee Health Prediction</strong> to detect anomalies and potential diseases. Data visualization and alerts are provided through the Blynk Cloud, enabling remote monitoring and promoting sustainable beekeeping practices.</p></div>
+        </div>
+        <div class="project card zoom-in">
+          <div>
+            <h3>Fitness Mantra Web Application</h3>
+            <div class="meta">PHP • MySQL • Responsive UI</div>
+            <p class="muted">Built a web-based platform that enables users, trainers, and admins to manage workout plans, track progress, and process payments securely through a clean and responsive interface.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="fade-up">
+      <h2>Work Experience</h2>
+      <div class="stack">
+        <div class="list-item card zoom-in">
+          <strong>St. Philomena College, Puttur — Assistant Professor (Computer Science)</strong>
+          <div class="muted" style="margin-top:8px">Aug 2024 — Present</div>
+          <ul class="muted" style="margin-top:10px">
+            <li>Teaching undergraduate students and mentoring projects in Computer Science.</li>
+            <li>Conducting sessions on IoT, programming, and emerging technologies.</li>
+            <li>Contributing to departmental initiatives and academic development.</li>
+          </ul>
+        </div>
+        <div class="list-item card zoom-in">
+          <strong>A1 Logics, Mangalore — Software Engineering Intern</strong>
+          <div class="muted" style="margin-top:8px">Oct 2023 — Dec 2023</div>
+          <ul class="muted" style="margin-top:10px">
+            <li>Worked on SDLC stages from requirements analysis to deployment.</li>
+            <li>Enhanced application performance and reduced project scope creep by 15%.</li>
+            <li>Developed applications in .NET using Visual C#.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="fade-up">
+      <h2>Contact</h2>
+      <div class="grid">
+        <div>
+          <p class="muted">If you’d like to collaborate, discuss opportunities, or ask about my work — feel free to reach out below or send an email to <strong>shodhanp68@gmail.com</strong>.</p>
+          <div style="margin-top:12px" class="card zoom-in">
+            <form onsubmit="handleContact(event)">
+              <input id="name" placeholder="Your name" required>
+              <input id="email" type="email" placeholder="Your email" required>
+              <input id="subject" placeholder="Subject">
+              <textarea id="message" placeholder="Message" required></textarea>
+              <div style="display:flex;gap:10px;align-items:center">
+                <button type="submit" class="btn-primary">Send Message</button>
+                <a href="mailto:shodhanp68@gmail.com?subject=Portfolio Inquiry" style="font-weight:600">Or email directly</a>
+              </div>
+              <div id="formStatus" class="muted" style="margin-top:8px"></div>
+            </form>
+          </div>
+        </div>
+        <div class="stack">
+          <div class="card list-item zoom-in">
+            <strong>Quick Info</strong>
+            <div class="muted" style="margin-top:8px">
+              <div>📍 Perumunda house, Panathady village, Kasargod</div>
+              <div>📞 +91 82812 22814</div>
+              <div>✉️ shodhanp68@gmail.com</div>
+              <div style="margin-top:8px">🔗 <a href="https://www.linkedin.com/in/shodhan-pg" target="_blank">LinkedIn</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap">
+    <div>© <strong>Shodhan Perumunda</strong></div>
+    <div class="muted"></div>
+  </div>
+</footer>
+
+<script>
+function handleContact(e){
+  e.preventDefault();
+  const name=document.getElementById('name').value.trim();
+  const email=document.getElementById('email').value.trim();
+  const subject=document.getElementById('subject').value.trim()||'Portfolio Inquiry';
+  const message=document.getElementById('message').value.trim();
+  const status=document.getElementById('formStatus');
+  if(!name||!email||!message){status.textContent='Please fill required fields.';return;}
+  const mailto=`mailto:shodhanp68@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent('Name: '+name+'\nEmail: '+email+'\n\n'+message)}`;
+  window.location.href=mailto;
+  status.textContent='Opening your email client...';
+}
+
+// Scroll reveal animation
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){entry.target.classList.add('visible');}
+  });
+},{threshold:0.2});
+
+document.querySelectorAll('.fade-up, .zoom-in').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
